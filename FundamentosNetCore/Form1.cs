@@ -14,7 +14,30 @@ namespace FundamentosNetCore
             this.txtNombre.Text = "Soy un string";
             this.txtNombre.Width = 220;
             this.txtNombre.TextAlign = HorizontalAlignment.Right;
-            this.btnPulsar.BackColor = Color.Gold; 
+            this.btnPulsar.BackColor = Color.Gold;
+
+            // NO ES CONVERSION AUTOMATICA
+            // int mayor = 88;
+            // short pequeño = mayor;
+
+            //ES CONVERSION AUTOMATICA
+            // short pequeño = 88;
+            // int mayor = pequeño;
+
+            //STRING A PRIMITIVO
+            // string textoNumero = "12345";
+            // int numero = int.Parse(textoNumero);
+            // double otro = double.Parse(textoNumero);
+
+            //CASTING PRIMITIVOS
+            // int mayor = 88;
+            // short pequeño = (short)mayor;
+
+            //CUAQLUIER OBJETO A STRING
+            // int numero = 88;
+            // string texto = numero.ToString();
+            // texto = btnPulsar.ToString();
+
         }
     }
 }
