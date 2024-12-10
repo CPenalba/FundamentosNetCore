@@ -16,5 +16,23 @@ namespace FundamentosNetCore
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSumarNumeros_Click(object sender, EventArgs e)
+        {
+            int num1 = int.Parse(this.txtNumero1.Text);
+            int num2 = int.Parse(this.txtNumero2.Text);
+            int suma = num1 + num2;
+            this.lblResultado.Text = suma.ToString();
+        }
     }
 }
