@@ -23,10 +23,22 @@ namespace FundamentosNetCore
             //this.button1.Click += BotonPulsado;
             //SI ALMACENMOS TODOS LOS OBJETOS DENTRI DE LA COLECCION, 
             //PODEMOS HACER LA ACCION DELEGADA CON UN FOREACH
-            this.botones.Add(button1);
-            this.botones.Add(button2);
-            this.botones.Add(button3);
-            this.botones.Add(button4);
+            //this.botones.Add(button1);
+            //this.botones.Add(button2);
+            // this.botones.Add(button3);
+            //this.botones.Add(button4);
+
+            //CON LA COLECCION CONTROLS POEDEMOS RECORRER UN CONJUNTO DE
+            //OBJETOS Y RELLENAR DINAMICAMENTE NUESTRAS COLECCIONES PROPIAS
+            foreach (Control miControl in this.Controls)
+            {
+                //DEBEMOS PREGUNTAR POR LOS BUTTON
+                if(miControl is Button)
+                {
+                    this.botones.Add((Button)miControl);
+                }
+            }
+
             foreach (Button boton in this.botones)
             {
                 boton.Click += BotonPulsado;
