@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO.IsolatedStorage;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,16 @@ namespace ProyectoClases
     {
         public Persona()
         {
+            Debug.WriteLine("Constructor PERSONA vacío");
             this.Domicilio = new Direccion();
         }
 
+        public Persona(string nombre, string apellidos)
+        {
+            Debug.WriteLine("Constructor PERSONA 2 parámetros");
+            this.Nombre = nombre;
+            this.Apellidos = apellidos;
+        }
 
         #region PROPIEDADES
 
@@ -31,6 +39,8 @@ namespace ProyectoClases
                 this._DescripcionThis = "Descripción " + aleat;
             }
         }
+
+
         public Direccion Domicilio { get; set; }
         public Direccion DomicilioVacaciones { get; set; }
 
@@ -53,7 +63,6 @@ namespace ProyectoClases
                 }
             }
         }
-
         public Paises Nacionalidad { get; set; }
 
         public string Nombre { get; set; }
@@ -115,6 +124,7 @@ namespace ProyectoClases
         {
             return "";
         }
+
         public void GetNombreCompleto(string dato) { }
 
         public void GetNombreCompleto(string dato, int num) { }

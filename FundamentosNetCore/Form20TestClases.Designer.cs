@@ -31,6 +31,7 @@
             label1 = new Label();
             btnPersona = new Button();
             lstClases = new ListBox();
+            btnEmpleado = new Button();
             SuspendLayout();
             // 
             // label1
@@ -44,7 +45,7 @@
             // 
             // btnPersona
             // 
-            btnPersona.Location = new Point(37, 352);
+            btnPersona.Location = new Point(39, 397);
             btnPersona.Name = "btnPersona";
             btnPersona.Size = new Size(247, 64);
             btnPersona.TabIndex = 2;
@@ -57,15 +58,25 @@
             lstClases.FormattingEnabled = true;
             lstClases.Location = new Point(37, 55);
             lstClases.Name = "lstClases";
-            lstClases.Size = new Size(761, 291);
+            lstClases.Size = new Size(634, 291);
             lstClases.TabIndex = 1;
-            lstClases.SelectedIndexChanged += lstClases_SelectedIndexChanged;
+            // 
+            // btnEmpleado
+            // 
+            btnEmpleado.Location = new Point(424, 397);
+            btnEmpleado.Name = "btnEmpleado";
+            btnEmpleado.Size = new Size(247, 61);
+            btnEmpleado.TabIndex = 3;
+            btnEmpleado.Text = "Empleado";
+            btnEmpleado.UseVisualStyleBackColor = true;
+            btnEmpleado.Click += button1_Click;
             // 
             // Form20TestClases
             // 
             AutoScaleDimensions = new SizeF(17F, 41F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(842, 488);
+            ClientSize = new Size(705, 488);
+            Controls.Add(btnEmpleado);
             Controls.Add(lstClases);
             Controls.Add(btnPersona);
             Controls.Add(label1);
@@ -82,5 +93,6 @@
         private Label label1;
         private Button btnPersona;
         private ListBox lstClases;
+        private Button btnEmpleado;
     }
 }

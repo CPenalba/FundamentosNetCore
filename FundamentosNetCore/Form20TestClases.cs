@@ -49,6 +49,7 @@ namespace FundamentosNetCore
             this.lstClases.Items.Add("Género: "
                 + persona.Genero + ", Nacionalidad: "
                 + persona.Nacionalidad);
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -59,6 +60,30 @@ namespace FundamentosNetCore
         private void lstClases_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //Empleado empleado = new Empleado("Empleado", "Empleado");
+            Empleado empleado = new Empleado();
+            empleado.Nombre = "Empleado";
+            empleado.Apellidos = "Empleado";
+
+            this.lstClases.Items.Add(empleado.GetNombreCompleto());
+            this.lstClases.Items.Add("Vacaciones Empleado "
+                + empleado.GetDiasVacaciones());
+            this.lstClases.Items.Add("Salario empleado "
+                + empleado.GetSalarioMinimo());
+
+            Director dire = new Director();
+            dire.Nombre = "Dire";
+            dire.Apellidos = "Director";
+            this.lstClases.Items.Add(dire.GetNombreCompleto());
+            this.lstClases.Items.Add("Vacaciones Director "
+                + dire.GetDiasVacaciones());
+
+            this.lstClases.Items.Add("Salario Dire "
+                + dire.GetSalarioMinimo());
         }
     }
 }
