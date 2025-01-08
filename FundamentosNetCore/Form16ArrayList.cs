@@ -16,6 +16,16 @@ namespace FundamentosNetCore
         public Form16ArrayList()
         {
             InitializeComponent();
+            //DECLARAMOS UNA COLECCION DE Button
+            List<Button> botones = new List<Button>();
+            botones.Add(this.button1);
+            botones.Add(this.button2);
+            botones.Add(this.button3);
+            //EL OBJETO ES RECONOCIBLE POR SU TIPADO T
+            botones[0].BackColor = Color.AliceBlue;
+            //TENEMOS ERRORES DE COMPILACION
+            //botones.Add(this.textBox1);
+
             //VAMOS A CREAR UNA COLECCION NO TIPADA
             //Y ALMACENAR LOS BOTONES
             ArrayList coleccion = new ArrayList();
@@ -53,6 +63,11 @@ namespace FundamentosNetCore
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
 
         }

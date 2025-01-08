@@ -33,7 +33,7 @@ namespace FundamentosNetCore
             foreach (Control miControl in this.Controls)
             {
                 //DEBEMOS PREGUNTAR POR LOS BUTTON
-                if(miControl is Button)
+                if (miControl is Button)
                 {
                     this.botones.Add((Button)miControl);
                 }
@@ -58,6 +58,11 @@ namespace FundamentosNetCore
         }
 
         private void Form17ListDelegados_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }

@@ -53,5 +53,10 @@ namespace FundamentosNetCore
             }
 
         }
+
+        private void txtSuma_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
